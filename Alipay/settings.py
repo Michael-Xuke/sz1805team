@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'alipay_app'
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+app_private_key_string = open(os.path.join(BASE_DIR, 'alipaykeys/app_private_key.pem'), mode='r').read()
+alipay_public_key_string = open(os.path.join(BASE_DIR, 'alipaykeys/alipay_public_key.pem'), mode='r').read()
+
+
